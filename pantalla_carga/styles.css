@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Press+Start+2P&family=Rajdhani:wght@300;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Rajdhani:wght@300;500;600&family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+*{
+    box-sizing: border-box;
+
+}
+body{
+    font-family:'Rajdhani';
+    background:url(recursos/fondomexa.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+    
+}
+
+#pantalla-principal{
+    display:block;
+    max-width: 700px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: rgba(255, 255, 255,.7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+#pantalla-principal h1{
+    font-family: 'Rammetto One';
+    font-size: 50px;
+    color:black;  
+}
+
+button{
+    background:#0F75F0;
+    border: none;
+    color: #ECF00F;
+    font-family: 'Lilita One';
+    padding: 30px 45px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 30px;
+    border-radius: 30px;
+    border-bottom: 4px solid #4b0872;
+}
+button:hover{
+    border-bottom: 4px solid transparent;
+    background-color: #8D88ED;
+}
+
+#game-board{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    margin-top: 20px;
+}

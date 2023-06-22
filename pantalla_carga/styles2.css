@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Rajdhani:wght@300;500;600&family=Rammetto+One&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size:'Rajdhani' ;
+    background:url(recursos/fondoajolote.png);
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+}
+#pantalla-modojuego{
+    display:block;
+    max-width: 700px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: rgba(255, 255, 255,.7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+#pantalla-modojuego h1{
+    font-family: 'Rammetto One';
+    font-size: 50px;
+    color:black;  
+}
+button{
+    box-sizing: border-box;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  border: 2px solid #e74c3c;
+  border-radius: 0.6em;
+  color: #e74c3c;
+  cursor: pointer;
+ -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  font-size:30px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Rammetto One'
+  
+}
+button{
+    border-color: #f1c40f;
+  color: black;
+  background-image: -webkit-linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+button:hover {
+    background-position: 0;
+  }

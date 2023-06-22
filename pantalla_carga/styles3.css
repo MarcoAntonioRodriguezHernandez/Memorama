@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&family=Rajdhani:wght@300;500;600&family=Rammetto+One&display=swap');
+*{
+    box-sizing: border-box;
+
+}
+body{
+    font-family:'Rajdhani';
+    background:url(recursos/fondobonito.png);
+    background-attachment: fixed;
+    background-size:cover;
+    background-position: center;
+}
+.background{
+    opacity:0.5;
+}
+#tipo-juego{
+    display:block;
+    max-width: 700px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:left;
+    background: rgba(255, 255, 255,.7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+#juego-normal{
+    display:block;
+    max-width: 700px;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:left;
+    background: rgba(255, 255, 255,.7);
+    padding: 30px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+#tipo-juego h1{
+    font-family: 'Rammetto One'; 
+    font-size: 25px;
+    color:black;  
+}
+#juego-normal h2{
+    font-family: 'Rammetto One';
+    font-size: 25px;
+    color:black;  
+}
+#tipo-juego p{
+    font-size: 25px;
+}
+#juego-normal p{
+    font-size: 25px;
+}
+button{
+        border-color: #3498db;
+        color: #000;
+        box-shadow: 0 0 100px 100px #3498db inset, 0 0 0 0 #3498db;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+        font-size: 15px;
+        font-family: 'Rammetto One'
+      }
+
+      button:hover {
+        box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+      }
