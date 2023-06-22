@@ -8,6 +8,7 @@ class Baraja {
     cartasEncontradas=0
     errores=0
     maxerrores=0
+    turnoActual=0
     crearBaraja(cant) {
         let rutas2 = this.rutas
         let id = 0
@@ -56,7 +57,7 @@ class Baraja {
             alert('correcto')
             this.cartasSeleccionadas[0].cartaLock()
             this.cartasSeleccionadas[1].cartaLock()
-
+            this.cartasEncontradas=this.finalJuego()
 
             return true
         }else{
@@ -85,7 +86,20 @@ class Baraja {
         return false
 
     }
+    finalJuego(){
+        let contador=0
+        for(let i=0;i<this.cartasOcupadas.length;i++){
+            if(this.cartasOcupadas[i].encontrada===true){
+                contador++
+                if(contador===this.cartasOcupadas.length){
+                    alert('ganaste')
 
+                }
+
+            }
+        }
+        return contador
+    }
     revisarEstado(arreglo){
         let max=arreglo.length;
         let contador=0;
@@ -95,7 +109,5 @@ class Baraja {
         }
         return contador;
     }
-    mensaje(){
-        alert("presiona para continuar")
-    }
+
 }
