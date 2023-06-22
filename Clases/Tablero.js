@@ -34,14 +34,16 @@ class Tablero {
             img.classList += ' imagen'
             img.setAttribute("id", "cartimg" + ocupable.id)
             img.src = ocupable.verificarEstado()
-            setTimeout(() => {
-                img.src=ocupable.verificarEstado()
-            }, "5000");
             let eleccion=this.eleccion
             let opc=this.opc
+            setTimeout(() => {
+                img.src=ocupable.verificarEstado()
+                
+            }, "5000");
+            
 
             img.addEventListener('click', function () {
-
+                
                 let obj = document.getElementById('cartimg' + ocupable.id)
                 if (baraja.contadorext <= 2) {
                     obj.src = ocupable.verificarEstado()
@@ -49,13 +51,16 @@ class Tablero {
                     setTimeout(() => {
                         baraja.contadorext = baraja.revisarEstado(baraja.cartasOcupadas)
                         if (baraja.contadorext === 2) {
-                            jugadores[baraja.turnoActual].sumarPuntuacion(1)
+                            
                             if(eleccion===1){
                                 if (baraja.compararCartas1()===false){
                                     let img1 = document.getElementById('cartimg' + baraja.cartasSeleccionadas[0].id)
                                     let img2 = document.getElementById('cartimg' + baraja.cartasSeleccionadas[1].id)
-                                    img1.src = baraja.cartasSeleccionadas[0].verificarEstado()
-                                    img2.src = baraja.cartasSeleccionadas[1].verificarEstado()
+                                    
+                                    
+                                        img1.src = baraja.cartasSeleccionadas[0].verificarEstado()
+                                        img2.src = baraja.cartasSeleccionadas[1].verificarEstado()
+                                    
                                     baraja.cartasSeleccionadas = []
 
                                 }else{
@@ -65,21 +70,27 @@ class Tablero {
                                 if (baraja.compararCartas2()===false){
                                     let img1 = document.getElementById('cartimg' + baraja.cartasSeleccionadas[0].id)
                                     let img2 = document.getElementById('cartimg' + baraja.cartasSeleccionadas[1].id)
-                                    img1.src = baraja.cartasSeleccionadas[0].verificarEstado()
-                                    img2.src = baraja.cartasSeleccionadas[1].verificarEstado()
+                                    
+                                        img1.src = baraja.cartasSeleccionadas[0].verificarEstado()
+                                        
+                                        img2.src = baraja.cartasSeleccionadas[1].verificarEstado()
+                                    
                                     baraja.cartasSeleccionadas = []
 
+                                }else{
+                                    jugadores[baraja.turnoActual].sumarPuntuacion(10)
                                 }
                             }
 
                             baraja.cartasSeleccionadas = []
 
-                            if(baraja.turnoActual===1) baraja.turnoActual=0
+                            if(baraja.turnoActual===1||jugadores.length!==1) baraja.turnoActual=0
                             else baraja.turnoActual=1
-                            jugadores[0].darPuntuacion()
-                            jugadores[1].darPuntuacion()
+                            for(let i=0;i<jugadores.length;i++){
+                            jugadores[i].darPuntuacion()
+                            }
                         }
-                    }, "1000");
+                    }, "2000");
 
                 } else {
 
